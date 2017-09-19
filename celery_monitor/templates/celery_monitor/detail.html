@@ -1,0 +1,5 @@
+{% load humanize %}
+{% load i18n %}
+
+<h1>{% trans 'Last update' %}: {{ heartbeat.modified|naturaltime }}</h1>
+{% trans 'at' context 'at datetime' %}: {{ heartbeat.modified }}
