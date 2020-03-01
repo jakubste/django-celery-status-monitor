@@ -2,6 +2,8 @@ from django.conf.urls import url
 
 from celery_monitor import views
 
+app_name = 'celery_monitor'
+
 urlpatterns = [
     url(r'^list/$', views.CeleryHeartBeatListView.as_view(), name='list'),
     url(r'^(?P<label>[\w-]+)/$', views.CeleryHeartBeatDetailView.as_view(), name='detail'),
